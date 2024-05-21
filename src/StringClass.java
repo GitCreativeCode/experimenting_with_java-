@@ -34,5 +34,7 @@ public class StringClass {
 
         System.out.println("There are " + result3 + "characters in the word" + "\nThe first letter is: " + result4 + "\nThe index which letter a is at: " + result5 + "\nIs it empty? " + result6);
         System.out.println(result7 + "\n" + result8 + "\n" + result9 + "\n" + result10);
+
+        scanner.close();
     }
 }
