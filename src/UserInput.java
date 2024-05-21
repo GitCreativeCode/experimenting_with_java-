@@ -16,6 +16,8 @@ public class UserInput {
         String food = scanner.nextLine();
 
         System.out.println("Hello, " + name + "and your age is " + age + "and your favourit food is " + food);
+        
+        scanner.close();
     }
     
 }
