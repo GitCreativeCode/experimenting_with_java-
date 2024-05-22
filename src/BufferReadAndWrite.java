@@ -6,25 +6,31 @@ public class BufferReadAndWrite{
         //The user enters a file name and checks of what is being inputed
         System.out.println("Eaither enter a file name (include \".txt\"), or a directory: ");
         String fileName = scanner.nextLine();
-        while(fileName.isBlank() || !fileName.endsWith(".txt") || !new File (fileName).exists()){
+        while(fileName.isBlank() || (!fileName.endsWith(".txt") && !new File (fileName).exists())){
             System.out.println("Invalid input the right directory");
             fileName = scanner.nextLine();
         }
 
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-
-            
             System.out.print("How many lines are you going to write?: ");
-            int lines = scanner.nextInt();
-            while(lines < 0){
-                System.out.println("Invalid number, re-enter an integer: ");
-                lines = scanner.nextInt();
-            }
-            for (int i = 0; i < lines+1; i++) {
-                System.out.print("");
-                String input = scanner.nextLine();
-                writer.write("\n" + input);
+            while (true) {
+                if (scanner.hasNextInt()) {
+                    int lines = scanner.nextInt();
+                    if (lines > 0) {
+                        for (int i = 0; i < lines; i++) {
+                            System.out.print("");
+                            String input = scanner.next();
+                            writer.write(input + "\n");
+                        }
+                        break;
+                    } else {
+                        System.out.println("Invalid number. Please enter a non-negative integer: ");
+                    }
+                } else {
+                    System.out.println("Invalid input. Please enter an integer: ");
+                    scanner.next(); // Consume the invalid input
+                }
             }
             scanner.close();
             writer.close();
