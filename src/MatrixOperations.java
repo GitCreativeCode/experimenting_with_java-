@@ -24,17 +24,16 @@ public class MatrixOperations {
         for (int j = 0; j < array4[0].length; j++) {
             for (int k = 0; k < array3[0].length; k++) { 
                 result2[i][j] += array3[i][k] * array4[k][j];
+                }
             }
         }
-    }
 
     // Print the result
     for (int i = 0; i < array3.length; i++) {
         for (int j = 0; j < array4[0].length; j++) {
             System.out.print(result2[i][j] + " ");
-        }
+            }
         System.out.println();
-    }
-
-}
+        }   
+    }  
 }
