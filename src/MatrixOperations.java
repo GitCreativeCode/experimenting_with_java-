@@ -8,11 +8,13 @@ public class MatrixOperations {
         int[][] array4 = {{2, -2, 2}, {-2, 0, -3}};
         int[][] result2 = new int[array3.length][array4[0].length];
 
+        //Adding Matrix
         for(int i=0; i<array1.length; i++) {
             for(int j=0; j<array1[0].length; j++) {
                 result[i][j] = array1[i][j] + array2[i][j];
             }
         }
+        //Printing the result
         for (int i=0; i<result.length; i++) {
             for(int j=0; j<result[0].length; j++){
             System.out.print(result[i][j] + " ");
@@ -20,6 +22,7 @@ public class MatrixOperations {
             System.out.println();
        }
 
+        //Multiplying Matrix
        for (int i = 0; i < array3.length; i++) {
         for (int j = 0; j < array4[0].length; j++) {
             for (int k = 0; k < array3[0].length; k++) { 
