@@ -101,5 +101,7 @@ public class ArrayStats {
         System.out.println("Sum: " + findSum(array));
         System.out.println("Array in highest to lowest order:" + arrayHighestToLowest(array));
         System.out.println("Array in lowest to highest order:" + arrayLowestToHighest(array));
+
+        scanner.close();
     }
 }

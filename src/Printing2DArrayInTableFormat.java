@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Printing2DArrayInTableFormat {
      
 
